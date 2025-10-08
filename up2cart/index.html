@@ -1,241 +1,187 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Attention - Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --red:#c8102e;
-            --darkred:#a50b20;
-            --panel:#efefef;
-            --text:#0b0b0b;
-            --bg:#000;
-            --white:#fff;
-            --highlight:#00ff7f;
-            --muted:rgba(255,255,255,0.92);
-            --maxw:860px;
-        }
-        *{box-sizing:border-box;}
-        html, body{margin:0; padding:0; font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--white);}
-        body{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:24px 12px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-        
-        .wrap{width:100%; max-width:var(--maxw);}
-        .column{display:flex; flex-direction:column; gap:26px; align-items:center; width:100%;}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attention - Manifestation Protection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#c8102e;
+      --darkred:#a50b20;
+      --panel:#efefef;
+      --text:#0b0b0b;
+      --bg:#000;
+      --white:#fff;
+      --highlight:#00ff7f;
+      --muted:rgba(255,255,255,0.92);
+      --maxw:860px;
+    }
+    *{box-sizing:border-box;}
+    html, body{margin:0; padding:0; font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--white);}
+    body{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:24px 12px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    
+    .wrap{width:100%; max-width:var(--maxw);}
+    .column{display:flex; flex-direction:column; gap:26px; align-items:center; width:100%;}
 
-        /* Card vermelho topo */
-        .card{
-            width:100%;
-            max-width:420px;
-            border-radius:12px;
-            overflow:hidden;
-            box-shadow:0 6px 20px rgba(0,0,0,0.18);
-            background:#fff;
-            margin-bottom:30px;
-        }
-        .card .header{
-            background: linear-gradient(180deg, var(--red), var(--darkred));
-            color:#fff;
-            padding:18px 16px;
-            text-align:center;
-        }
-        .card .header h1{
-            margin:0;
-            font-size:20px;
-            font-weight:800;
-            letter-spacing:0.6px;
-            text-transform:uppercase;
-        }
-        .card .header p{
-            margin:8px 0 0;
-            font-size:14px;
-            font-weight:700;
-            opacity:0.98;
-        }
-        .card .panel{
-            background:var(--panel);
-            color:var(--text);
-            padding:28px 22px;
-            text-align:center;
-            line-height:1.48;
-        }
-        .card .panel p{margin:18px 0; font-size:15px; font-weight:400;}
-        .card .panel .em, .card .panel .center-strong, .card .panel .last{
-            display:block;
-            font-weight:800;
-            font-size:16px;
-            margin:6px 0;
-        }
+    /* Card vermelho topo */
+    .card{
+      width:100%;
+      max-width:420px;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,0.18);
+      background:#fff;
+      margin-bottom:30px;
+    }
+    .card .header{
+      background: linear-gradient(180deg, var(--red), var(--darkred));
+      color:#fff;
+      padding:18px 16px;
+      text-align:center;
+    }
+    .card .header h1{
+      margin:0;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:0.6px;
+      text-transform:uppercase;
+    }
+    .card .header p{
+      margin:8px 0 0;
+      font-size:14px;
+      font-weight:700;
+      opacity:0.98;
+    }
+    .card .panel{
+      background:var(--panel);
+      color:var(--text);
+      padding:28px 22px;
+      text-align:center;
+      line-height:1.48;
+    }
+    .card .panel p{margin:18px 0; font-size:15px; font-weight:400;}
+    .card .panel .em, .card .panel .center-strong, .card .panel .last{
+      display:block;
+      font-weight:800;
+      font-size:16px;
+      margin:6px 0;
+    }
 
-        /* Hero e produto */
-        .hero, .product{width:100%; max-width:760px; border-radius:22px; overflow:hidden; box-shadow:0 18px 40px rgba(0,0,0,0.7); height: 50px; background-color: #222; display: flex; align-items: center; justify-content: center; color: white;} /* Estilo para ocupar o espaço da imagem */
-        /* .hero img, .product img{width:100%; height:auto; display:block; object-fit:cover;} REMOVIDO */
-        .product{border-radius:14px; box-shadow:0 12px 30px rgba(0,0,0,0.7); background-color: #333;}
-        .hero::after, .product::after { content: "Placeholder for Hero Image"; font-size: 16px; }
-        .product::after { content: "Placeholder for Product Image"; }
+    /* Conteúdo texto principal */
+    .content{width:100%; max-width:760px; text-align:center; line-height:1.6; font-size:18px; color:var(--muted);}
+    .content p{margin:18px 0; font-weight:400;}
+    .content .strong, .content .center-strong{display:block; font-weight:800; font-size:20px; margin:8-12px 0; line-height:1.25; color:var(--white);}
+    .content .big{font-size:19px; line-height:1.62; margin-top:10px; font-weight:400;}
 
-        /* Conteúdo texto principal */
-        .content{width:100%; max-width:760px; text-align:center; line-height:1.6; font-size:18px; color:var(--muted);}
-        .content p{margin:18px 0; font-weight:400;}
-        .content .strong, .content .center-strong{display:block; font-weight:800; font-size:20px; margin:8-12px 0; line-height:1.25; color:var(--white);}
-        .content .big{font-size:19px; line-height:1.62; margin-top:10px; font-weight:400;}
+    /* Caixa de benefícios vermelha */
+    .benefits{background-color:#d10000; color:#fff; padding:25px; border-radius:15px; max-width:500px; margin:20px auto; line-height:1.6; font-size:16px; text-align:left;}
+    .benefits h2{font-weight:700; font-size:20px; text-transform:uppercase; margin-bottom:20px;}
 
-        /* Caixa de benefícios vermelha */
-        .benefits{background-color:#d10000; color:#fff; padding:25px; border-radius:15px; max-width:500px; margin:20px auto; line-height:1.6; font-size:16px; text-align:left;}
-        .benefits h2{font-weight:700; font-size:20px; text-transform:uppercase; margin-bottom:20px;}
+    /* Garantia e preço */
+    .guarantee{max-width:500px; width:100%; margin:25px auto; text-align:center;}
+    .price{font-size:28px; font-weight:700; color:var(--highlight); text-align:center; margin-top:10px;}
 
-        /* Garantia e preço */
-        .guarantee{max-width:500px; width:100%; margin:25px auto; text-align:center; height: 100px; background-color: #555; display: flex; align-items: center; justify-content: center; color: white; border-radius:15px;} /* Estilo para ocupar o espaço da imagem */
-        /* .guarantee img{width:100%; max-width:500px; border-radius:15px;} REMOVIDO */
-        .guarantee::after { content: "Placeholder for 60-Day Guarantee Image"; font-size: 16px; }
-        .price{font-size:28px; font-weight:700; color:var(--highlight); text-align:center; margin-top:10px;}
+    /* Botão pulse */
+    .pulse-glow-button {
+      display:inline-block;
+      padding: 14px 28px;
+      margin: 20px;
+      background-color:#28a745;
+      color:#fff;
+      font-size:18px;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:8px;
+      text-align:center;
+      animation: pulse-glow 1.5s infinite;
+    }
+    @keyframes pulse-glow {
+      0% {transform: scale(1); box-shadow: 0 0 0 rgba(40,167,69,0.6);}
+      50% {transform: scale(1.08); box-shadow: 0 0 25px 12px rgba(40,167,69,0.5);}
+      100% {transform: scale(1); box-shadow: 0 0 0 rgba(40,167,69,0.6);}
+    }
 
-        /* Responsivo */
-        @media (max-width:720px){
-            :root{--maxw:420px;}
-            .content{font-size:16px;}
-            .strong, .center-strong{font-size:18px;}
-            .hero, .product{border-radius:18px;}
-        }
-        @media (max-width:420px){
-            .content{font-size:15px; padding:0 8px;}
-            .strong, .center-strong{font-size:17px;}
-            .hero, .product{border-radius:14px;}
-            .benefits{padding:18px;}
-        }
-    </style>
+    /* Responsivo */
+    @media (max-width:720px){
+      :root{--maxw:420px;}
+      .content{font-size:16px;}
+      .strong, .center-strong{font-size:18px;}
+    }
+    @media (max-width:420px){
+      .content{font-size:15px; padding:0 8px;}
+      .strong, .center-strong{font-size:17px;}
+      .benefits{padding:18px;}
+    }
+  </style>
 </head>
 <body>
 
-    <div class="card" role="region" aria-label="Attention Step 4 of 4">
-        <div class="header">
-            <h1>ATTENTION STEP 4 OF 4:</h1>
-            <p>WAIT A MOMENT! THE LAST STEP TO CONFIRM YOUR PURCHASE IS MISSING...</p>
-        </div>
-        <div class="panel">
-            <p><span class="em">Congratulations on making it this far.</span></p>
-            <p>You've already gained knowledge that will transform your nights... <span class="center-strong">But now I want to show you how to take it even further.</span></p>
-            <p>Do not press the back button, and do not leave this page. Because doing so could cause an error with your purchase.</p>
-            <p class="last"><span class="center-strong">I need to show you a huge advantage against the biggest enemy of your manifestation... The biggest enemy is simply: LOSING everything you’ve manifested.</span></p>
-        </div>
+  <!-- Card vermelho com atenção -->
+  <div class="card" role="region" aria-label="Attention Step 4 of 4">
+    <div class="header">
+      <h1>ATTENTION STEP 4 OF 4:</h1>
+      <p>WAIT A MOMENT! THE LAST STEP TO CONFIRM YOUR PURCHASE IS MISSING...</p>
     </div>
-
-    <div class="wrap">
-        <div class="column">
-            <div class="hero">
-                
-            </div>
-
-            <div class="content" role="main">
-                <p>When you solve this problem, you will protect yourself from envy, the evil eye, and negative energy that works 24 hours a day, 7 days a week, 365 days a year, trying to **SABOTAGE** your manifestations.</p>
-                <p>And this is crucial because, well, if you stop and think...</p>
-                <p>What good is it if Father Antônio prays for you... if you don’t protect what you are going to manifest?</p>
-                <p>Every second you remain unprotected is another second that other people’s envy can drain your abundance.</p>
-                <p>And the way to do this is through the **“20-Word Prayer.”**</p>
-                <p>Manifestation without protection is like leaving gold on the street.</p>
-                <p>With this second prayer, you will be able to **PROTECT** your manifestations even more...</p>
-                <p>And save countless financial losses, health issues, and relationships destroyed by other people’s envy.</p>
-                <p class="center-strong">King Solomon was not only the richest man in biblical history. He was also the MOST ENVIED man.</p>
-                <p>Kings of neighboring nations tried to steal his wealth. Servants tried to sabotage his businesses. Even members of his own family conspired against him.</p>
-                <p>That’s why Solomon realized he needed **TWO** prayers:</p>
-                <p>The first to attract abundance and prosperity, which you already have access to.</p>
-                <p>And the second to **PROTECT** against envy.</p>
-                <p class="big">Just imagine how powerful it would be to have these two prayers working together for you! You could be completely shielded against any negative energy!</p>
-                <p>This 20-word protective prayer activates spiritual shielding, like magic, automatically, with no effort from you.</p>
-                <p class="strong">The Bible is FULL of stories of blessed people who were destroyed by other people’s envy.</p>
-                <p>Like Joseph, the son of Jacob, who was sold by his own brother out of envy.</p>
-                <p>However, if you want to have a strong guarantee that nothing and no one will steal what is yours, this is your chance.</p>
-                <p>And I can tell you that when you take advantage of this special offer and start using this Second Prayer... You will keep far more wealth than you ever imagined possible.</p>
-                <p>You only need to recite this prayer 3 times a day, at nightfall.</p>
-                <p>It’s a protection frequency that automatically neutralizes envy, the evil eye, and negative energy.</p>
-                <p>All you have to do is press play on the audio and follow our simple 3-times-a-day recitation protocol.</p>
-                <p>And then, the magic of protection begins to happen.</p>
-                <p>Just imagine waking up in a few days and realizing that those financial losses have stopped...</p>
-                <p>Unexpected expenses no longer appear. Problems resolve themselves.</p>
-                <p>And it helps you protect yourself as much as possible against any negative interference.</p>
-                <p>But our system can only release 50 audios per month.</p>
-                <p class="center-strong">However, if you are watching this video, that means there is at least 1 spot still available, reserved for you.</p>
-                <p class="strong">Only today, you can experience the Second Protection Prayer for just $69.</p>
-                <p>Yes, you heard that right.</p>
-                <p>Just a single, tiny payment of $69.</p>
-                <p>Click the green button below to access the app, because your access has just been successfully released.</p>
-                <p>And you know the best part?</p>
-                <p>On any other spiritual platform, you would be charged monthly.</p>
-                <p>And if you didn’t pay even one month, they would immediately deactivate your access.</p>
-                <p class="strong">Here, that doesn’t happen.</p>
-                <p class="strong">👉 Click the button below right now to access it immediately.</p>
-            </div>
-
-            <div style="text-align:center; margin:20px 0; font-family: Arial, sans-serif;">
-                <style>
-                    .pulse-glow-button {
-                        display:inline-block;
-                        padding: 14px 28px;
-                        margin: 20px;
-                        background-color:#28a745; /* green */
-                        color:#fff;
-                        font-size:18px;
-                        font-weight:bold;
-                        text-decoration:none;
-                        border-radius:8px;
-                        text-align:center;
-                        animation: pulse-glow 1.5s infinite;
-                    }
-
-                    @keyframes pulse-glow {
-                        0% {
-                            transform: scale(1);
-                            box-shadow: 0 0 0 rgba(40,167,69, 0.6);
-                        }
-                        50% {
-                            transform: scale(1.08);
-                            box-shadow: 0 0 25px 12px rgba(40,167,69, 0.5);
-                        }
-                        100% {
-                            transform: scale(1);
-                            box-shadow: 0 0 0 rgba(40,167,69, 0.6);
-                        }
-                    }
-                </style>
-
-                <a href="https://go.centerpag.com/PPU38CQ1FSD?upsell=true" class="pulse-glow-button">
-                    YES! I WANT TO PROTECT MY MANIFESTATIONS NOW
-                </a>
-            </div>
-
-            <div class="product">
-                
-            </div>
-
-            <div class="benefits">
-                <h2>WHAT YOU'LL DISCOVER INSIDE:</h2>
-                <p>✅ The 20-Word Prayer to create a protective spiritual shield.</p>
-                <p>✅ The simple 3-times-a-day recitation protocol.</p>
-                <p>✅ A protection frequency that automatically neutralizes envy and the evil eye.</p>
-                <p>✅ How to protect yourself against negative energy 24/7/365.</p>
-                <p>✅ King Solomon's secret to protecting his immense wealth.</p>
-            </div>
-
-            <div class="guarantee">
-                
-            </div>
-
-            <div class="price">$69 USD</div>
-            
-            <p style="text-align:center; margin:20px 0; font-size:16px; color:var(--muted);">Ah, and before I forget, know that the small investment you make today is protected by our **60-Day Guarantee.**</p>
-            <p class="strong" style="text-align:center;">Click below and take advantage of this opportunity right now.</p>
-
-
-            <script
-                src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-                data-utmify-prevent-xcod-sck
-                data-utmify-prevent-subids
-                async
-                defer
-            ></script>
-       
-        </div>
+    <div class="panel">
+      <p><span class="em">Congratulations on making it this far.</span></p>
+      <p>You have already acquired knowledge that can transform your life... <span class="center-strong">But now I want to show you how to take it even further.</span></p>
+      <p>Imagine protecting everything you manifest from envy and negative energy... <span class="center-strong">This “20-Word Prayer” shields you 24/7 from sabotage.</span></p>
+      <p>Manifestation without protection is like leaving gold on the street. <span class="center-strong">This second prayer ensures your abundance stays yours.</span></p>
+      <p class="last">Now is your chance to access the <strong>Second Protective Prayer</strong> and secure your manifestations from financial losses, health issues, and disrupted relationships.</p>
     </div>
+  </div>
+
+  <div class="wrap">
+    <div class="column">
+
+      <!-- Texto principal -->
+      <div class="content" role="main">
+        <p>Wait! Do not press the back button, and do not leave this page. Doing so could cause an error with your purchase.</p>
+        <p>But before you access everything and begin your manifestation journey… I need to show you a huge advantage against the biggest enemy of your manifestation.</p>
+        <p>The biggest enemy is simply: <span class="center-strong">LOSING everything you’ve manifested.</span></p>
+        <p>With the 20-Word Protective Prayer, you will shield yourself from envy, the evil eye, and negative energy working 24/7, ensuring your manifestations stay safe.</p>
+        <p>Recite this prayer 3 times a day, at nightfall, and let its protective frequency neutralize interference automatically.</p>
+        <p class="big">Imagine waking up in a few days and noticing unexpected expenses disappear, financial losses stop, and problems resolve themselves effortlessly.</p>
+        <p class="strong">Today, you can access the Second Protection Prayer for just $69 USD.</p>
+        <p><span class="center-strong">Click the green button below to unlock access immediately and protect your manifestations.</span></p>
+      </div>
+
+      <!-- Botão pulse -->
+      <div style="text-align:center;">
+        <a href="https://go.centerpag.com/PPU38CQ1FSD?upsell=true" class="pulse-glow-button">
+          YES! I WANT TO PROTECT MY MANIFESTATIONS NOW
+        </a>
+      </div>
+
+      <!-- Caixa de benefícios -->
+      <div class="benefits">
+        <h2>WHAT YOU WILL DISCOVER INSIDE:</h2>
+        <p>✅ How to activate spiritual shielding with the 20-Word Prayer.</p>
+        <p>✅ Protect your wealth, health, and relationships from envy.</p>
+        <p>✅ Simple steps to recite 3 times a day for full protection.</p>
+        <p>✅ Maintain the power of your manifestations without interference.</p>
+        <p>✅ Guaranteed method that works automatically, 24/7.</p>
+      </div>
+
+      <!-- Garantia -->
+      <div class="guarantee">
+        <p>60-Day Money-Back Guarantee</p>
+      </div>
+
+      <!-- Preço -->
+      <div class="price">$69 USD</div>
+
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
 </body>
 </html>
