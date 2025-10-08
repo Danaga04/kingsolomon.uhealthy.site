@@ -1,182 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Attention - Protection Offer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --red:#c8102e;
-      --darkred:#a50b20;
-      --panel:#efefef;
-      --text:#0b0b0b;
-      --bg:#000;
-      --white:#fff;
-      --highlight:#00ff7f;
-      --muted:rgba(255,255,255,0.92);
-      --maxw:860px;
-    }
-    *{box-sizing:border-box;}
-    html, body{margin:0; padding:0; font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--white);}
-    body{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:24px 12px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-    
-    .wrap{width:100%; max-width:var(--maxw);}
-    .column{display:flex; flex-direction:column; gap:26px; align-items:center; width:100%;}
-
-    /* Top red card */
-    .card{
-      width:100%;
-      max-width:420px;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 6px 20px rgba(0,0,0,0.18);
-      background:#fff;
-      margin-bottom:30px;
-    }
-    .card .header{
-      background: linear-gradient(180deg, var(--red), var(--darkred));
-      color:#fff;
-      padding:18px 16px;
-      text-align:center;
-    }
-    .card .header h1{
-      margin:0;
-      font-size:20px;
-      font-weight:800;
-      letter-spacing:0.6px;
-      text-transform:uppercase;
-    }
-    .card .header p{
-      margin:8px 0 0;
-      font-size:14px;
-      font-weight:700;
-      opacity:0.98;
-    }
-    .card .panel{
-      background:var(--panel);
-      color:var(--text);
-      padding:28px 22px;
-      text-align:center;
-      line-height:1.48;
-    }
-    .card .panel p{margin:18px 0; font-size:15px; font-weight:400;}
-    .card .panel .em, .card .panel .center-strong, .card .panel .last{
-      display:block;
-      font-weight:800;
-      font-size:16px;
-      margin:6px 0;
-    }
-
-    /* Main content text */
-    .content{width:100%; max-width:760px; text-align:center; line-height:1.6; font-size:18px; color:var(--muted);}
-    .content p{margin:18px 0; font-weight:400;}
-    .content .strong, .content .center-strong{display:block; font-weight:800; font-size:20px; margin:8-12px 0; line-height:1.25; color:var(--white);}
-    .content .big{font-size:19px; line-height:1.62; margin-top:10px; font-weight:400;}
-
-    /* Red benefits box */
-    .benefits{background-color:#d10000; color:#fff; padding:25px; border-radius:15px; max-width:500px; margin:20px auto; line-height:1.6; font-size:16px; text-align:left;}
-    .benefits h2{font-weight:700; font-size:20px; text-transform:uppercase; margin-bottom:20px;}
-
-    /* Price */
-    .price{font-size:28px; font-weight:700; color:var(--highlight); text-align:center; margin-top:10px;}
-
-    /* Button */
-    .pulse-glow-button {
-      display:inline-block;
-      padding: 14px 28px;
-      margin: 20px;
-      background-color:#28a745; /* green */
-      color:#fff;
-      font-size:18px;
-      font-weight:bold;
-      text-decoration:none;
-      border-radius:8px;
-      text-align:center;
-      animation: pulse-glow 1.5s infinite;
-    }
-    @keyframes pulse-glow {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 rgba(40,167,69, 0.6);
-      }
-      50% {
-        transform: scale(1.08);
-        box-shadow: 0 0 25px 12px rgba(40,167,69, 0.5);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 rgba(40,167,69, 0.6);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width:720px){
-      :root{--maxw:420px;}
-      .content{font-size:16px;}
-      .strong, .center-strong{font-size:18px;}
-    }
-    @media (max-width:420px){
-      .content{font-size:15px; padding:0 8px;}
-      .strong, .center-strong{font-size:17px;}
-      .benefits{padding:18px;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Prayer of Protection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .header {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .alert {
+            background-color: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 18px;
+        }
+        .content {
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 30px 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top red card -->
-  <div class="card" role="region" aria-label="Attention Final Step">
-    <div class="header">
-      <h1>ATTENTION: FINAL STEP</h1>
-      <p>DO NOT PRESS THE BACK BUTTON OR LEAVE THIS PAGE!</p>
+    <div class="header">WAIT!</div>
+
+    <div class="alert">
+        do not press the back button and do not leave this page.<br><br>
+        Because this may cause an error in your purchase.
     </div>
-    <div class="panel">
-      <p><span class="em">Congratulations on making it this far.</span></p>
-      <p>You’ve already gained access to powerful manifestation techniques... <span class="center-strong">But now I want to show you how to protect what you manifest.</span></p>
-      <p>The biggest enemy of your manifestation is losing everything you’ve worked for due to envy, the evil eye, and negative energy.</p>
-      <p><span class="center-strong">Without protection, your abundance is at risk every single second.</span></p>
-      <p class="last">That’s why we’ve created the <strong>20-Word Prayer</strong> to shield your manifestations.</p>
+
+    <div class="content">
+        But before you access everything and begin your manifestation journey...
+
+        I need to show you a huge advantage against the biggest enemy of your manifestation...
+
+        The biggest enemy is simply: <strong>LOSING everything you manifested.</strong>
+
+        When you solve this problem, you will protect yourself from envy, the evil eye, and negative energy that works 24 hours a day, 7 days a week, 365 days a year trying to SABOTAGE your manifestations.
+
+        And this is crucial because, well, if you stop to think...
+
+        What’s the point of Father Antonio praying for you... if you do not protect what you are going to manifest?
+
+        Every second you remain unprotected is another second that others’ envy can drain your abundance.
+
+        And the way to do this is through the "20 Word Prayer."
+
+        Manifestation without protection is like leaving gold on the street.
+
+        With this second prayer, you will be able to PROTECT your manifestations even more...
+
+        And save countless financial losses, health issues, and relationships destroyed by other people's envy.
+
+        King Solomon was not only the richest man in biblical history.
+
+        He was also the most ENVIED man.
+
+        Kings of neighboring nations tried to steal his wealth.
+
+        Servants tried to sabotage his business.
+
+        Even members of his own family conspired against him.
+
+        That is why Solomon discovered he needed TWO prayers:
+
+        The first to attract abundance and prosperity, which you already have access to.
+
+        And the second to PROTECT against envy.
+
+        Just imagine how powerful it will be to have these two prayers working together for you!
+
+        You could be completely shielded from any negative energy!
+
+        This 20-word protective prayer activates spiritual shielding, like magic, all automatic, with no effort from you.
+
+        The Bible is FULL of stories of blessed people who were destroyed by others’ envy.
+
+        Like Joseph, the son of Jacob, who was sold by his own brother out of envy.
+
+        However, if you want a strong guarantee that nothing and no one will steal what is yours, this is your chance.
+
+        And I can tell you that, when you take advantage of this special offer and start using this Second Prayer...
+
+        You will keep much more wealth than you imagined possible.
+
+        You only have to recite this prayer 3 times a day, at nightfall.
+
+        It is a protection frequency that neutralizes envy, the evil eye, and negative energy automatically.
+
+        All you need to do is press play on the audio and follow our simple protocol of 3 daily recitations.
+
+        And then, the magic of protection starts to happen.
+
+        Just imagine waking up in a few days noticing that those financial losses have stopped...
+
+        Unexpected expenses no longer appear.
+
+        Problems resolve themselves.
+
+        And you protect yourself as much as possible against any negative interference.
+
+        But our system can only release 50 audios per month.
+
+        However, if you are seeing this video, it means that at least 1 spot is still available, reserved for you.
+
+        Only today, you can experience the Second Prayer of Protection for just $69.
+
+        Yes, you heard right.
+
+        Only a single, tiny payment of $69.
+
+        <div class="button-container">
+            <div id="kiwify-upsell-5kVlEO2" data-upsell-url="https://vcbemcomseucorpo.site/home-acess-solomon/" data-downsell-url="https://vcbemcomseucorpo.site/home-acess-solomon/">
+                <button id="kiwify-upsell-trigger-5kVlEO2" style="background-color:#27AF60;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #27AF60;font-size:20px;">ACCESS 20 WORD PRAYER AND ACCESS APP</button>
+                <div id="kiwify-upsell-cancel-trigger-5kVlEO2" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">do not access</div>
+            </div>
+            <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+        </div>
+
+        And you know what’s the best part?
+
+        On any other spiritual platform, you would be charged monthly.
+
+        And if you did not pay even one month, they would immediately disable your access.
+
+        Here, this does not happen.
+
+        So, click the button below right now to access immediately.
+
+        Oh, and before I forget, know that the small investment you will make today will be protected by our <em>60-Day Guarantee</em>.
+
+        Click below and seize this opportunity right now.
     </div>
-  </div>
-
-  <div class="wrap">
-    <div class="column">
-      <!-- Main content -->
-      <div class="content" role="main">
-        <p>Wait! Do not press the back button or leave this page, as it could cause an error with your purchase.</p>
-        <p>Before you access everything and begin your manifestation journey, I need to show you a huge advantage against the biggest enemy of your manifestation: losing everything you’ve manifested.</p>
-        <p>This is crucial because, if you stop and think, what good is it if Father Antônio prays for you if you don’t protect what you’re going to manifest?</p>
-        <p>Every second you remain unprotected is another second that other people’s envy can drain your abundance.</p>
-        <p><span class="center-strong">The solution is the “20-Word Prayer.”</span></p>
-        <p>Manifestation without protection is like leaving gold on the street. With this second prayer, you’ll protect your manifestations even more and save countless financial losses, health issues, and relationships destroyed by envy.</p>
-        <p>King Solomon, the richest and most envied man in biblical history, needed two prayers: one to attract abundance, which you already have, and another to protect against envy.</p>
-        <p><span class="center-strong">Imagine having these two prayers working together for you, shielding you from negative energy!</span></p>
-        <p class="big">This 20-word protective prayer activates spiritual shielding automatically, with no effort from you.</p>
-        <p>The Bible is full of stories of blessed people destroyed by envy, like Joseph, sold by his own brother. But with this prayer, you can ensure nothing steals what’s yours.</p>
-        <p><span class="strong">Normally, this prayer is sold separately for $149, but as my special student, you can get it today for just $69.</span></p>
-        <p>You’re one step away from ultimate protection. <span class="center-strong">Don’t miss this unique opportunity to safeguard your abundance.</span></p>
-        <p class="strong">👉 Click the button below to unlock access now.</p>
-      </div>
-
-      <!-- Button -->
-      <a href="https://go.centerpag.com/PPU38CQ1FSD?upsell=true" class="pulse-glow-button">
-        YES! I WANT TO PROTECT MY MANIFESTATIONS NOW
-      </a>
-
-      <!-- Benefits box -->
-      <div class="benefits">
-        <h2>WHAT YOU’LL DISCOVER INSIDE:</h2>
-        <p>✅ A 20-word prayer to shield your manifestations.</p>
-        <p>✅ Automatic protection against envy and negative energy.</p>
-        <p>✅ Simple 3-times-a-day recitation protocol for effortless use.</p>
-        <p>✅ Spiritual shielding that neutralizes the evil eye.</p>
-        <p>✅ A way to safeguard your wealth, health, and relationships.</p>
-      </div>
-
-      <!-- Price -->
-      <div class="price">$69 USD</div>
-
+  
       <!-- UTMify script -->
       <script
         src="https://cdn.utmify.com.br/scripts/utms/latest.js"
@@ -185,7 +160,10 @@
         async
         defer
       ></script>
-    </div>
-  </div>
+  
 </body>
 </html>
+
+
+
+      
